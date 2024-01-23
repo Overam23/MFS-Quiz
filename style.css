@@ -20,6 +20,14 @@ button{
     background-color: black;
     font-size: 1.3em;
 }
+.start-btn{
+    font-size:1rem;
+    font-weight: bold;
+    
+}
+.btn:hover{
+    border-color: pink;
+}
 /* HEADER/quiz intro */
 h1, h2 {
     color:red;
@@ -53,7 +61,7 @@ h1, h2 {
     }
 /* Header/Quiz Intro */
 .qIntro, main {
-    /* display:none   */
+   
     margin-bottom: 30vh;
     margin-left: 10%;
     margin-right: 10%;
@@ -66,19 +74,10 @@ h1, h2 {
     display: block;
     margin: 0 auto;
    }
+
+
+
 /* Main Quiz Content */
-main{
-    display:none;
-}
-/* QUESTION Selection */
-.qDisplay {
-    display: none;
-}
-/* QUIZ COMPLETED */
-.qComplete {
-    display: none;
-}
-/* HIGHSCORE Section */
-.highScore {
+.hide {
     display:none;
 }

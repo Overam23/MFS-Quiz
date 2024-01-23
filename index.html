@@ -21,23 +21,40 @@
       <div class="cont2">
        <!-- INTRO -->
       <!-- HEADER/quiz intro -->
-       <header class="qIntro">
+       <header id= "show" class="qIntro">
               <h1>Hello Quiz Taker</h1>
               <p>Press Start Quiz to BEGIN!</p>
-              <button>Start Quiz</button>
+              
+              <button id="start-btn" class="start-btn btn">Start Quiz</button>
+             
+              
+             
        </header>
        <!-- main quiz content -->
        <main>
 
         <!-- QUESTIONS Section -->
-        <section class="qDisplay">
+       <section id="qDisplay">
+            <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            
+            <div id="answer-buttons" class="btn-grid"></div>
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+            </div>
             <h2 id="question-title"></h2>
-          
 
         </section>
 
+
+          
+
+        
+
         <!-- QUIZ COMPLETED section-->
-        <section class= "qComplete">
+        <section id= "qComplete" class="hide">
             <h2> Quiz Completed!</h2>
             <p>Your Score: 00</p>
           <div>
@@ -49,7 +66,7 @@
         </section>
 
         <!-- HIGH SCORE section-->
-        <section class="highScore">
+        <section id="highScore" class="hide">
             <h2>HighScore:</h2>
            
             <button>GO BACK</button>
