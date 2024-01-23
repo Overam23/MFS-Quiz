@@ -1,0 +1,84 @@
+
+/* global declarations */
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: white;
+}
+/* body setting */
+body {
+    background-color:white;
+    }
+p{
+    color:black;
+    font-size: 1.3em;
+}
+button{
+    outline:none;
+    background-color: black;
+    font-size: 1.3em;
+}
+/* HEADER/quiz intro */
+h1, h2 {
+    color:red;
+    text-align: center;
+
+    li{
+        list-style: armenian;
+    }
+   }
+/* outer section */
+.cont1 {
+ padding: 10px;
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: start;
+}
+/* top bar */
+.topBar p {
+    float: right;
+}
+/* inner section */
+.cont2 {
+    background-color:white;
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+/* Header/Quiz Intro */
+.qIntro, main {
+    /* display:none   */
+    margin-bottom: 30vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color:blue ;
+    }
+.qIntro p {
+    text-align: center;
+}
+.qIntro button {
+    display: block;
+    margin: 0 auto;
+   }
+/* Main Quiz Content */
+main{
+    display:none;
+}
+/* QUESTION Selection */
+.qDisplay {
+    display: none;
+}
+/* QUIZ COMPLETED */
+.qComplete {
+    display: none;
+}
+/* HIGHSCORE Section */
+.highScore {
+    display:none;
+}
