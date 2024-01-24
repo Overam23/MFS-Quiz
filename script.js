@@ -1,25 +1,50 @@
-
 var startButton = document.getElementById('start-btn');
 var questionContainerElement = document.getElementById('question-container');
 var questionElement = document.getElementById('question');
 var answerSectionDiv = document.getElementById('answer-buttons');
-var quizIntro = document.getElementById('show');
+var quizIntro = document.getElementById('quiz');
+
 // 
 // TIMER //
 // 
+document.getElementById("start-btn").addEventListener("click", function(){
+    var timeleft = 60;
+
+    var downloadTimer = setInterval(function function1(){
+    document.getElementById("timer").innerHTML = timeleft;
+    
+
+    timeleft -= 1;
+    if(timeleft <= 0){
+        clearInterval(downloadTimer);
+        document.getElementById("timer").innerHTML = "Time is up!"
+    }
+    }, 1000);
+
+    
+});
+
+//     document.getElementById('incorrect').addEventListener('click', function() {
+//         sec -= 5;
+//         document.getElementById('timer').innerHTML='00:'+sec;
+//     });
+//     startTimer();
+// })();
 
 
 
 
 
 
-// 
-startButton.addEventListener('click', startQuiz)
+startButton.addEventListener('click', startQuiz);
 
 function startQuiz() {
     // console.log('work')
+    
+    
+    
     quizIntro.classList.add('hide')
-
+    
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
@@ -32,6 +57,7 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
+
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
         var button = document.createElement('button')
@@ -44,16 +70,17 @@ function showQuestion(question) {
         console.log(button)
 
         answerSectionDiv.appendChild(button)
-    })
+
+})}
+ 
 
 
-}
 function selectAnswer(event) {
     console.log(event.target)
     console.log(event.target.dataset.correct)
     let correctAnswer = event.target.dataset.correct;
     
-    
+   
     
     
     if(correctAnswer){
@@ -64,18 +91,6 @@ function selectAnswer(event) {
     
     
     
-    
-    
-    //let userChoice = event.target.innerHTML;
-
-
-    // if(choice == correct){
-    //     console.lof("correct")
-    // }else{
-    //     console.log("inccorrect")
-    // }
-
-
 
 }
 
@@ -107,4 +122,4 @@ var questions = [
             {text: 'so', sorrect:false}
         ]
     }
-]
+];
