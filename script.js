@@ -1,3 +1,4 @@
+// set variables to pull from html
 var startButton = document.getElementById('start-btn');
 var questionContainerElement = document.getElementById('question-container');
 var questionElement = document.getElementById('question');
@@ -24,27 +25,16 @@ document.getElementById("start-btn").addEventListener("click", function(){
     
 });
 
-//     document.getElementById('incorrect').addEventListener('click', function() {
-//         sec -= 5;
-//         document.getElementById('timer').innerHTML='00:'+sec;
-//     });
-//     startTimer();
-// })();
 
 
 
 
-
+// addEventListner so Start button have a function to click and start quiz
 
 startButton.addEventListener('click', startQuiz);
 
 function startQuiz() {
-    // console.log('work')
-    
-    
-    
     quizIntro.classList.add('hide')
-    
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
@@ -106,20 +96,46 @@ function resetState() {
 
 var questions = [
     {
-        question: 'example question here?',
+        question: 'What does HTML stand for?',
         answers: [
-            { text: 'here', correct: false },
-            { text: 'there', correct: false },
-            { text: 'no', correct: true },
-            { text: 'yes', correct: false }]
+            { text: 'Hyper Text Markup Language', correct: true },
+            { text: 'Hyper Text Mash Language', correct: false },
+            { text: 'Hyper Text Moving Language', correct: false },
+            { text: 'Hyper Text Marginal Language', correct: false }]
     },
     {
-        question:'answer the question?',
+        question:'What does CSS stand for?',
         answer:[
-            {text: 'yes', correct: false},
-            {text: 'no', correct:false},
-            {text: 'maybe', correct:true},
-            {text: 'so', sorrect:false}
+            {text: 'Cascading Style Sheets', correct: true},
+            {text: 'Color Styling Sheets', correct:false},
+            {text: 'Correct Shimmer Sheets', correct:false},
+            {text: 'Coloring System Sheets', sorrect:false}
         ]
-    }
+    },
+    {
+        question: 'Numbers, Strings, and Bolleans are this type? ',
+        answers: [
+            { text: 'Data', correct: true },
+            { text: 'Variable', correct: false },
+            { text: 'id', correct: false },
+            { text: 'Class', correct: false }]
+    },
+    {
+        question:'What does SQL stand for?',
+        answer:[
+            {text: 'Structured Query Language', correct: true},
+            {text: 'Stylesheet Query Language', correct:false},
+            {text: 'Statements Questions Laguage', correct:false},
+            {text: 'Stylish Question Language', sorrect:false}
+        ]
+    },
+    {
+        question:'What does PHP Stand for?',
+        answer:[
+            {text: 'Hypertext Preprocessor', correct: true},
+            {text: 'Phast Hypertext Pages', correct:false},
+            {text: 'Phish Hypertext Processor', correct:false},
+            {text: 'Hypertext Processor', sorrect:false}
+        ]
+    },
 ];
