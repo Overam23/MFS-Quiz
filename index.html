@@ -1,87 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- created title -->
     <title>QUIZ TESTER</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- linked css -->
-   
+    <!-- linked css -->
+
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
     <!-- outter section -->
     <div class="cont1">
-      <!-- top bar section -->
+        <!-- top bar section -->
         <div class="topBar">
-           <button>View Highscores</button>
-           <p>Timer: 00:00</p>
+            <button>View Highscores</button>
+            <p>Timer: 00:00</p>
         </div>
-   <!-- inner -->
-      <div class="cont2">
-       <!-- INTRO -->
-      <!-- HEADER/quiz intro -->
-       <header id= "show" class="qIntro">
-              <h1>Hello Quiz Taker</h1>
-              <p>Press Start Quiz to BEGIN!</p>
-              
-              <button id="start-btn" class="start-btn btn">Start Quiz</button>
-             
-              
-             
-       </header>
-       <!-- main quiz content -->
-       <main>
+        <!-- inner -->
+        <div class="cont2">
+            <!-- INTRO -->
+            <!-- HEADER/quiz intro -->
+            <header id="show" class="qIntro">
+                <h1>Hello Quiz Taker</h1>
+                <p>Press Start Quiz to BEGIN!</p>
 
-        <!-- QUESTIONS Section -->
-       <section id="qDisplay">
-            <div id="question-container" class="hide">
-            <div id="question">Question</div>
-            
-            <div id="answer-buttons" class="btn-grid"></div>
-            <button class="btn">Answer 1</button>
-            <button class="btn">Answer 2</button>
-            <button class="btn">Answer 3</button>
-            <button class="btn">Answer 4</button>
-            </div>
-            <h2 id="question-title"></h2>
-
-        </section>
+                <button id="start-btn" class="start-btn btn">Start Quiz</button>
 
 
-          
 
-        
+            </header>
+            <!-- main quiz content -->
+            <main>
 
-        <!-- QUIZ COMPLETED section-->
-        <section id= "qComplete" class="hide">
-            <h2> Quiz Completed!</h2>
-            <p>Your Score: 00</p>
-          <div>
-            <label for="">Enter Initials:</label>
-            <input type="text" name="initialsSpot" maxlength="2" id="initials">
-            <button id="submit-button">Submit</button>
-        </div>  
+                <!-- QUESTIONS Section -->
+                <section id="qDisplay">
+                    <div id="question-container" class="hide">
+                        <div id="question">Question</div>
 
-        </section>
-
-        <!-- HIGH SCORE section-->
-        <section id="highScore" class="hide">
-            <h2>HighScore:</h2>
-           
-            <button>GO BACK</button>
-            <button> Clear Highscores</button>
-
-        </section>
-
-       </main>
+                        <div id="answer-buttons" class="btn-grid">
 
 
-      </div>
+
+
+
+
+                        </div>
+
+                    </div>
+                    <h2 id="question-title"></h2>
+
+                </section>
+
+
+
+
+
+
+                <!-- QUIZ COMPLETED section-->
+                <section id="qComplete" class="hide">
+                    <h2> Quiz Completed!</h2>
+                    <p>Your Score: 00</p>
+                    <div>
+                        <label for="">Enter Initials:</label>
+                        <input type="text" name="initialsSpot" maxlength="2" id="initials">
+                        <button id="submit-button">Submit</button>
+                    </div>
+
+                </section>
+
+                <!-- HIGH SCORE section-->
+                <section id="highScore" class="hide">
+                    <h2>HighScore:</h2>
+
+                    <button>GO BACK</button>
+                    <button> Clear Highscores</button>
+
+                </section>
+
+            </main>
+
+
+        </div>
 
     </div>
-    
-<!--linked javascript  -->
-    <script src="script.js"></script>   
+
+    <!--linked javascript  -->
+    <script src="script.js"></script>
 </body>
+
 </html>
